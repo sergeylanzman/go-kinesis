@@ -351,7 +351,7 @@ func TestBatchPartialFailure(t *testing.T) {
 	b.Add([]byte("foo"), "fail")
 
 	// First attempt
-	time.Sleep(5 * time.Millisecond)
+	time.Sleep(7 * time.Millisecond)
 	if len(b.records) != 1 {
 		t.Errorf("%v != 1", len(b.records))
 	}
